@@ -20,8 +20,7 @@ task:
     chmod a+x lein
     mv lein /usr/local/bin/
 
-    script/setup-musl-aarch64
-    script/build-musl
+    script/build
     cp src/*.a ubuntu-latest-aarch64/resources/dtlvnative/ubuntu-latest-aarch64/
     cp src/dtlv.h ubuntu-latest-aarch64/resources/dtlvnative/ubuntu-latest-aarch64/
     cp src/lmdb/libraries/liblmdb/lmdb.h ubuntu-latest-aarch64/resources/dtlvnative/ubuntu-latest-aarch64/lmdb/libraries/liblmdb/
