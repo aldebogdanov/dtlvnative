@@ -14,8 +14,7 @@ echo "${ZLIB_SHA256} zlib-${ZLIB_VERSION}.tar.gz" | sha256sum --check
 tar xf "zlib-${ZLIB_VERSION}.tar.gz"
 
 cd "zlib-${ZLIB_VERSION}"
-echo $CFLAGS
-CC=musl-gcc ./configure --static --prefix="/usr/local"
+CC=musl-gcc CFLAGS=-Wno-error ./configure --static --prefix="/usr/local"
 make CC=musl-gcc
 make install
 cd ..
