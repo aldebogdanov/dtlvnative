@@ -1,5 +1,6 @@
 task:
-  arm_container: ubuntu:latest
+  arm_container:
+    image: ghcr.io/cirruslabs/ubuntu-runner-arm64:latest # ubuntu:latest
   only_if: $CIRRUS_TAG != ''
   # only_if: "changesInclude('macos-latest-aarch64/*', 'macos-latest-aarch64-shared/*', '.cirrus.yml')"
   env:
