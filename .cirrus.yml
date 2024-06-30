@@ -4,6 +4,7 @@ task:
   only_if: $CIRRUS_TAG != ''
   # only_if: "changesInclude('macos-latest-aarch64/*', 'macos-latest-aarch64-shared/*', '.cirrus.yml')"
   env:
+    CFLAGS: "-Wno-error"
     LEIN_ROOT: "true"
     CLOJARS_USERNAME: ENCRYPTED[57ecc4e3c46322710eff3eecb11b85933ee46c6424967d5a33e0cbd5bcdba1b47aeccd09ed6a513768153919a98d5c19]
     CLOJARS_PASSWORD: ENCRYPTED[447c822c61921dc3e01194577eb4a6a2d974dba7068b9b5238b72bb5233b48e9eb6410262fef43d7dc95f9daf758a6e3]

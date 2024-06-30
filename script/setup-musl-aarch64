@@ -14,7 +14,6 @@ echo "${ZLIB_SHA256} zlib-${ZLIB_VERSION}.tar.gz" | sha256sum --check
 tar xf "zlib-${ZLIB_VERSION}.tar.gz"
 
 cd "zlib-${ZLIB_VERSION}"
-cat configure
 CC=musl-gcc ./configure --static --prefix="/usr/local"
 make CC=musl-gcc
 make install
