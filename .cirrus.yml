@@ -23,7 +23,7 @@ task:
 
     script/build-linux-shared
     mkdir -p ubuntu-latest-aarch64-shared/resources/dtlvnative/ubuntu-latest-aarch64-shared
-    cp src/lmdb/libraries/liblmdb/liblmdb.dylib ubuntu-latest-aarch64-shared/resources/dtlvnative/ubuntu-latest-aarch64-shared/
+    cp src/lmdb/libraries/liblmdb/liblmdb.so ubuntu-latest-aarch64-shared/resources/dtlvnative/ubuntu-latest-aarch64-shared/
     cd ubuntu-latest-aarch64-shared
     lein deploy clojars
 
