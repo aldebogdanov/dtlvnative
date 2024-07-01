@@ -21,11 +21,10 @@ task:
     chmod a+x lein
     mv lein /usr/local/bin/
 
-    script/build
-    cp src/*.a ubuntu-latest-aarch64/resources/dtlvnative/ubuntu-latest-aarch64/
-    cp src/dtlv.h ubuntu-latest-aarch64/resources/dtlvnative/ubuntu-latest-aarch64/
-    cp src/lmdb/libraries/liblmdb/lmdb.h ubuntu-latest-aarch64/resources/dtlvnative/ubuntu-latest-aarch64/lmdb/libraries/liblmdb/
-    cd ubuntu-latest-aarch64
+    script/build-linux-shared
+    mkdir -p ubuntu-latest-aarch64-shared/resources/dtlvnative/ubuntu-latest-aarch64-shared
+    cp src/lmdb/libraries/liblmdb/liblmdb.dylib ubuntu-latest-aarch64-shared/resources/dtlvnative/ubuntu-latest-aarch64-shared/
+    cd ubuntu-latest-aarch64-shared
     lein deploy clojars
 
 task:
